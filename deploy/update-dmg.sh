@@ -13,4 +13,4 @@ curl --fail --location --retry 3 "$release_url/Prompter.dmg.sha256" --output "$t
 (cd "$temp_dir" && sha256sum --check Prompter.dmg.sha256)
 chmod 644 "$temp_dir/Prompter.dmg"
 mv -f "$temp_dir/Prompter.dmg" "$download_dir/Prompter.dmg"
-echo "Installed $tag at https://kavitha.cloud/downloads/Prompter.dmg"
+echo "Installed $tag at https://eyeline.kavitha.cloud/downloads/Prompter.dmg"

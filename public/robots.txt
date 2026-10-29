@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://kavitha.cloud/sitemap.xml
+Sitemap: https://eyeline.kavitha.cloud/sitemap.xml

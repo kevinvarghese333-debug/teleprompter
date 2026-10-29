@@ -1,6 +1,6 @@
-# Prompter website
+# EyeLine website
 
-Landing page for Prompter, hosted at https://kavitha.cloud on a dedicated Hostinger VPS container. React, Vite, Tailwind, shadcn/ui (Button, Card, Accordion), and Lucide. Layout based on the user's Applio Framer project. Fonts and sky image are served locally; no Framer hosting dependency.
+Landing page for EyeLine, hosted at https://eyeline.kavitha.cloud on a dedicated Hostinger VPS container. React, Vite, Tailwind, shadcn/ui (Button, Card, Accordion), and Lucide. Layout based on the user's Applio Framer project. Fonts and sky image are served locally; no Framer hosting dependency.
 
 ## Local development
 
@@ -16,7 +16,7 @@ For a working local download, copy your installer to `public/downloads/Prompter.
 
 ## VPS deployment
 
-The existing Traefik proxy handles HTTPS. `compose.yaml` connects only the new Prompter container to `traefik_default`, with a route for `kavitha.cloud`. No additional public ports are opened.
+The existing Traefik proxy handles HTTPS. `compose.yaml` connects only the new Prompter container to `traefik_default`, with a route for `eyeline.kavitha.cloud`. No additional public ports are opened.
 
 ```sh
 git clone https://github.com/kevinvarghese333-debug/teleprompter.git /opt/prompter/site
@@ -35,7 +35,7 @@ docker compose up -d --build
 
 ## Upload a new DMG
 
-The download button always points to `https://kavitha.cloud/downloads/Prompter.dmg`.
+The download button always points to `https://eyeline.kavitha.cloud/downloads/Prompter.dmg`.
 
 **Option 1: SFTP.** Connect to your VPS using your existing SSH account in Cyberduck or FileZilla. Upload to `/opt/prompter/downloads/Prompter.dmg.new`, then rename it to `Prompter.dmg` after upload completes. Set file permissions to 644. The site uses the new file immediately; no container rebuild is needed. The persistent folder is outside the repository and mounted read-only inside the container.
 
@@ -61,3 +61,7 @@ The dashboard is an illustrative visual, not a browser teleprompter. No screen r
 ## Credits
 
 shadcn/ui components are MIT licensed; see `THIRD_PARTY_NOTICES.md`. Lucide is ISC licensed. Fonts are distributed under SIL OFL licenses in their installed packages. Sky image comes from the user's existing Framer project. Applio layout attribution to Amar KZR is retained in the footer.
+
+## EyeLine rebrand
+
+The public site is EyeLine at https://eyeline.kavitha.cloud. Its download URL is `/downloads/EyeLine.dmg`. Nginx serves the existing `Prompter.dmg` file at that new URL, so existing upload and checksum workflows continue working. The v1.1 binary still has its original Prompter application name; the FAQ makes that explicit. Internal repository, container and VPS directory names remain stable.

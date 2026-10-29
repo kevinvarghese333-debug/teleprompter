@@ -10,7 +10,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=traefik_default
-      - traefik.http.routers.prompter.rule=Host(`kavitha.cloud`)
+      - traefik.http.routers.prompter.rule=Host(`eyeline.kavitha.cloud`)
       - traefik.http.routers.prompter.priority=1
       - traefik.http.routers.prompter.entrypoints=websecure
       - traefik.http.routers.prompter.tls=true
